@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  
+}
+
+.banner {
+    background-color: black;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.wallpaper {
+    text-align: center;
+}
+
+.wallpaper img {
+    max-width: 100%;
+    height: auto;
+}
+
+.intro {
+    text-align: center;
+    margin: 20px 0; /* Add some margin for spacing */
+    position: relative;
+    overflow: hidden;
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateX(-50px); /* Set initial position off-screen to the left */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
+}
+
+.intro.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.intro img {
+    max-width: 100%;
+    height: auto; /* Set the desired height */
+    width: auto; /* Let the width adjust automatically */
+    display: block; /* Remove any default inline spacing */
+    margin: 0 auto; /* Center the image */
+}
+.intro h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Specify the font family */
+    font-weight: 300; /* Specify the font weight for Roboto Light */
+    font-size: 4vw;
+}
+
+
+.product-feature {
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 100; /* Light font weight */
+    margin-top: 30px; /* Adjust margin as needed */
+    opacity: 0;
+    transform: translateX(50px); /* Start off-screen to the right */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.product-feature.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.show-left,
+.show-right,
+.show-righta,
+.show-lefta,
+.show-leftb,
+.show-rightb {
+    width: 48%; /* Adjust the width as needed */
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.show-left,
+.show-right,
+.show-lefta,
+.show-righta,
+.show-leftb,
+.show-rightb {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.show-left.visible,
+.show-right.visible,
+.show-lefta.visible,
+.show-righta.visible,
+.show-leftb.visible,
+.show-rightb.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+.show-left{
+    text-align: left;
+    
+}
+
+.show-left h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size:4vw;
+}
+
+.show-left
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 2.5vw;
+}
+
+
+.show-right img{
+    max-width: 100%;
+    height: auto;
+    float: right;
+}
+
+
+.show-righta{
+    text-align: right;
+    order: 2; /* Change the order for right-aligned content */
+}
+
+.show-righta h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size:4vw;
+}
+
+.show-righta
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 2.5vw;
+}
+
+.show-lefta img{
+    max-width: 100%;
+    height: auto;
+    order: 1;
+}
+
+.show-leftb,
+.show-rightb {
+    order: 3; /* Place show-leftb and show-rightb at the bottom */
+}
+
+.show-leftb h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 4vw;
+}
+
+.show-leftb p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 2.5vw;
+}
+
+.show-rightb img{
+    max-width: 100%;
+    height: auto;
+    float: right;
+}
+
+.product-gallery {
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 100; /* Light font weight */
+    margin-top: 30px; /* Adjust margin as needed */
+    opacity: 0;
+    transform: translateX(50px); /* Start off-screen to the right */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.product-gallery.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.product-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;;
+    gap: 10px;
+}
+
+.product-images img {
+    max-width: 30%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-images img:hover {
+    transform: scale(1.2); /* Adjust the scale factor as needed */
+}
+
+.image-header{
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 100; /* Light font weight */
+    margin-top: 30px; /* Adjust margin as needed */
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        
+}
+
+.image-header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.image-header.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+.A1-images {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:10px;
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 2.0s ease-in-out, opacity 2.0s ease-in-out;
+}
+
+
+
+.A1-images img{
+    max-width: 45%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+.A1-images.animate {
+    height: 100%;
+    opacity: 1;
+}
+
+.A1-images img:hover {
+    transform: scale(1.2); /* Adjust the scale factor as needed */
+}
+
+.checkout {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    color: rgb(7, 148, 7);
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
+}
+
+button {
+    color: white;
+    background-color: #f04902;
+    border-color:white;
+    font-size: 3vw;
+    padding: 15px;
+    margin-bottom: 30px;
+}
